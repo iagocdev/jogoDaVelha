@@ -1,0 +1,146 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Orbitron', sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7, 0 0 20px #00fff7;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  gap: 10px;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background-color: #1a1a1a;
+  border: 2px solid #00fff7;
+  border-radius: 10px;
+  font-size: 2.5rem;
+  color: #00fff7;
+  text-shadow: 0 0 10px #00fff7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.cell:hover {
+  background-color: #00fff733;
+}
+
+.cell.x {
+  color: #ff4081;
+  text-shadow: 0 0 10px #ff4081;
+}
+
+.cell.o {
+  color: #00e5ff;
+  text-shadow: 0 0 10px #00e5ff;
+}
+
+.message {
+  margin-top: 20px;
+  color: #fff;
+  display: none;
+}
+
+.message.show {
+  display: block;
+  background: #00000088;
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid #00fff7;
+  box-shadow: 0 0 15px #00fff7;
+}
+
+#restartButton {
+  margin-top: 15px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 10px;
+  background-color: #00fff7;
+  color: #000;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00fff7;
+}
+
+#restartButton:hover {
+  background-color: #00e5ff;
+}
+.cell.x::before {
+  content: "X";
+  font-size: 2.5rem;
+  color: #ff4081;
+  text-shadow: 0 0 10px #ff4081;
+}
+
+.cell.o::before {
+  content: "O";
+  font-size: 2.5rem;
+  color: #00e5ff;
+  text-shadow: 0 0 10px #00e5ff;
+}
+.cell {
+  position: relative;
+}
+.cell::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.difficulty-select {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #00fff7;
+  font-size: 1rem;
+}
+select {
+  background: #1a1a1a;
+  border: 1px solid #00fff7;
+  color: #00fff7;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+/*--------------Chat boot ------------*/
+.chatbot {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #000000bb;
+  color: #00fff7;
+  font-family: 'Orbitron', sans-serif;
+  padding: 15px 25px;
+  border-radius: 15px;
+  border: 2px solid #00fff7;
+  box-shadow: 0 0 20px #00fff7;
+  min-width: 300px;
+  text-align: center;
+  font-size: 1.2rem;
+  user-select: none;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+.chatbot.show {
+  opacity: 1;
+}

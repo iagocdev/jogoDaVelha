@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo da Velha Divertido</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Jogo da Velha 🎮</h1>
+    <div class="difficulty-select">
+    <label for="difficulty">Dificuldade:</label>
+    <select id="difficulty">
+    <option value="easy">Fácil</option>
+    <option value="medium">Médio</option>
+    <option value="hard">Difícil</option>
+    </select>
+</div>
+
+    <div id="game-board" class="board">
+      <!-- Casas do jogo -->
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+      <div class="cell" data-cell></div>
+    </div>
+    <div class="message" id="winningMessage">
+      <p id="messageText"></p>
+      <button id="restartButton">Reiniciar 🔁</button>
+    </div>
+    <div id="chatbot" class="chatbot">...</div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
